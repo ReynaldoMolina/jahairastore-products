@@ -4,8 +4,8 @@ import '../styles/global.css';
 import banner from '../assets/banner.jpg';
 ---
 
-<section class="flex flex-col md:flex-row px-4 sm:px-6 lg:px-8 h-[80vh] max-w-screen-xl mx-auto">
-  <div class="flex flex-col w-full bg-sky-100 h-full rounded-t-3xl md:rounded-t-none md:rounded-l-3xl p-10 gap-4 md:gap-7 justify-center">
+<section class="flex flex-col md:flex-row md:h-[90vh] px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto py-8 sm:py-12">
+  <div class="flex flex-col md:w-1/2 w-full bg-sky-100 h-auto rounded-t-3xl md:rounded-t-none md:rounded-l-3xl p-10 gap-4 md:gap-7 justify-center">
     <h1 class="font-semibold text-4xl md:text-5xl text-center md:text-left">Jahaira Store</h1>
     <p class="text-neutral-600 text-sm md:text-base text-center md:text-left text-pretty">Elegancia y tendencias de Shein a tu alcance. Moda y estilo al mejor precio, encuentra lo que amas y luce increíble cada día.</p>
 
@@ -19,17 +19,17 @@ import banner from '../assets/banner.jpg';
       </div>
     </div>
 
-    <div class="flex flex-col w-full justify-center items-center mt-5 gap-3 sm:flex-row">
-      <a href="/jahairastore-products/#information" class="flex justify-center items-center text-sm rounded-2xl p-3 w-40 border-1 border-neutral-400">
-        <span class="font-semibold">Más información</span>
+    <div class="flex w-full justify-center items-center mt-5 gap-3">
+      <a href="/jahairastore-products/#information" class="flex justify-center items-center text-sm rounded-2xl p-3 w-40 border-1 border-neutral-400 h-10">
+        <span class="font-semibold text-xs md:text-sm">Información</span>
       </a>
 
-      <a href="/jahairastore-products/#products" class="flex justify-center items-center text-sm bg-black rounded-2xl p-3 w-40 gap-3">
-        <span class="text-white font-semibold">Ver productos</span>
-        <Icon name="arrow-down" class="size-5" />
+      <a href="/jahairastore-products/#products" class="flex justify-center items-center text-sm bg-black rounded-2xl p-3 w-40 gap-2 h-10">
+        <span class="text-white font-semibold text-xs md:text-sm">Productos</span>
+        <Icon name="arrow-down" class="size-4" />
       </a>
     </div>
 
   </div>
-  <img src={banner.src} class="w-full h-full rounded-b-3xl md:rounded-bl-none md:rounded-r-3xl object-cover" alt="">
+  <img src={banner.src} class="md:w-1/2 w-full h-auto rounded-b-3xl md:rounded-bl-none md:rounded-r-3xl object-cover max-h-[330px] sm:max-h-[295px] md:max-h-none" alt="">
 </section>

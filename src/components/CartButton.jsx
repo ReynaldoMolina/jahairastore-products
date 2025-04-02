@@ -1,0 +1,19 @@
+import React from 'react';
+import cartIcon from '../icons/cart.svg';
+import '../styles/global.css';
+
+function CartButton() {
+  const badge = 2;
+
+  return (
+    <button
+      className="flex items-center gap-2 rounded-xl bg-sky-100 px-3 py-2.5 transition hover:bg-sky-200 cursor-pointer"
+    >
+      <img src={cartIcon.src} className="size-5"></img>
+      <span className="text-sm font-semibold">Carrito</span>
+      <span className={`${badge < 1 && "hidden"} flex items-center justify-center rounded-full size-6 text-xs bg-red-300 font-bold`}>{badge}</span>
+    </button>
+  );
+}
+
+export { CartButton };

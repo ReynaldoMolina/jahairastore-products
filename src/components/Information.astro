@@ -1,24 +1,23 @@
 ---
-import { Icon } from 'astro-icon/components';
 import shopping from '../assets/shopping.jpg';
 import { faq } from "./data";
 import '../styles/global.css';
 ---
 
 <section id="information">
-  <div class="mx-auto flex flex-col max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto flex flex-col max-w-screen-xl items-center gap-8 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col gap-3 mx-auto">
-      <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl text-center w-full">Más información</h1>
-      <p class="mx-auto text-gray-500 text-center md:px-10 lg:px-30 text-sm sm:text-base">
+      <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl text-center w-full mt-12">Más información</h1>
+      <p class="mx-auto text-gray-500 text-center px-3 md:px-10 lg:px-30 text-sm sm:text-base">
         ¿Tienes dudas sobre cómo comprar? ¿Qué opciones de pago ofrecemos? ¿Cuánto tarda el envío? Aquí te explicamos todo para que tu experiencia sea fácil y segura.
       </p>
     </div>
     <img class="rounded-3xl object-cover h-[30vh] sm:h-[45vh] md:h-[60vh] w-full" src={shopping.src} alt="Online shopping">
 
-    <div class="flex flex-col gap-10 w-full px-3 sm:px-10">
+    <div class="flex flex-col gap-5 md:gap-7 w-full px-3 sm:px-10">
       {faq.map((element) => 
-        <span class="flex flex-col gap-2">
-          <p class="font-bold">{element.question}</p>
+        <span class="flex flex-col gap-1">
+          <p class="font-bold text-sm sm:text-base">{element.question}</p>
           <p class="text-sm sm:text-base text-neutral-600">{element.answer}</p>
         </span>
       )}
