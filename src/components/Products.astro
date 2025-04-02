@@ -20,7 +20,7 @@ import { products } from './products';
             <img
               src={product.image}
               alt=""
-              class="h-[200px] w-full object-cover transition duration-500 group-hover:scale-103 rounded-2xl"
+              class="h-[200px] w-full object-contain transition duration-500 group-hover:scale-103 rounded-2xl"
             />
 
             <div class="flex flex-col gap-4 justify-between px-2">
@@ -31,11 +31,6 @@ import { products } from './products';
                 <div class="flex items-center gap-2">
                   <Icon name="price" class="size-5" />
                   <span class="text-gray-600 text-sm">${product.price.toFixed(2)}</span>
-                </div>
-
-                <div class="flex items-center gap-2">
-                  <Icon name={product.storeIcon} class="size-5" />
-                  <span class="text-gray-600 text-sm">{product.store}</span>
                 </div>
               </div>
               <button class="flex justify-center items-center size-11 p-3 rounded-full cursor-pointer bg-white/80 hover:bg-white transition absolute top-7 right-7">
