@@ -1,11 +1,12 @@
 import { useStore } from '@nanostores/react';
-import { cart, isCartOpen } from '../components/cartData';
+import { cartData, isCartOpen } from '../components/cartData';
 import cartIcon from '../icons/cart.svg';
 import '../styles/global.css';
 
 function CartButton() {
-  const badge = cart.length;
   const $isCartOpen = useStore(isCartOpen);
+  const $cartData = useStore(cartData);
+  const badge = $cartData.length;
 
   return (
     <button

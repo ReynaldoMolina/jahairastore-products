@@ -1,26 +1,26 @@
 export const products = [
   {
     id: 0,
-    name: 'Basic Tee color azul',
-    price: 45.3,
-    image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+    name: 'essence | Lash Princess False Lash Effect Mascara',
+    price: 4.99,
+    image: 'https://m.media-amazon.com/images/I/61K6cQhw4EL._AC_UL480_QL65_.jpg',
   },
   {
-    id: 0,
-    name: 'e.l.f. Makeup Mist & Set, Hydrating Setting Spray For Setting & Reviving Makeup',
+    id: 1,
+    name: 'e.l.f. Makeup Mist & Set',
     price: 7.8,
     image: 'https://m.media-amazon.com/images/I/51LDQgICtjL._AC_UL480_QL65_.jpg',
   },
   {
     id: 2,
-    name: 'Basic T-Shirt',
-    price: 5.43,
-    image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+    name: 'URBAN DECAY Naked 3 Mini Eyeshadow Palette',
+    price: 28,
+    image: 'https://m.media-amazon.com/images/I/81Avvz-kzCL._AC_UL480_QL65_.jpg',
   },
   {
     id: 3,
-    name: 'Basic T-Shirt',
-    price: 5.43,
-    image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+    name: 'Milani Make It Dewy Setting Spray 3 in 1',
+    price: 2.83,
+    image: 'https://m.media-amazon.com/images/I/61FShAVBgSL._AC_UL480_QL65_.jpg',
   },
 ];
