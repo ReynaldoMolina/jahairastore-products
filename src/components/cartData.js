@@ -1,3 +1,7 @@
+import { atom } from 'nanostores';
+
+export const isCartOpen = atom(true);
+
 export let cart = [
   {
     id: 0,

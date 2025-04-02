@@ -1,11 +1,14 @@
 import '../styles/global.css';
-import { cart } from './cartData';
+import { useStore } from '@nanostores/react';
+import { cart, isCartOpen } from './cartData';
 
 function Cart() {
   const cartTotal = cart.reduce((sum, product) => sum + (product.price * product.qty), 0)
 
+  const $isCartOpen = useStore(isCartOpen);
+
   return (
-    <div className="flex h-[calc(100vh-56px)] sm:max-h-[calc(100vh-112px)] flex-col gap-2 bg-white sm:rounded-3xl sm:max-w-md p-4 left-0 sm:left-auto w-full absolute top-16 sm:right-8 border-t-1 border-t-neutral-200 sm:border-1 sm:border-neutral-200 shadow-2xl">
+    <div className={`${$isCartOpen && "hidden"} flex h-[calc(100vh-56px)] sm:max-h-[calc(100vh-112px)] flex-col gap-2 bg-white sm:rounded-3xl sm:max-w-md p-4 left-0 sm:left-auto w-full absolute top-16 sm:right-8 border-t-1 border-t-neutral-200 sm:border-1 sm:border-neutral-200 shadow-2xl`}>
       <div className='flex justify-between p-2 border-b-1 border-b-neutral-200'>
         <span className='text-gray-700 font-semibold'>Productos: {cart.length}</span>
         <span className='text-gray-700 font-semibold'>Total: ${cartTotal.toFixed(2)}</span>

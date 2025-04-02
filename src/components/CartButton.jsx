@@ -1,12 +1,17 @@
-import React from 'react';
+import { useStore } from '@nanostores/react';
+import { isCartOpen } from '../components/cartData';
 import cartIcon from '../icons/cart.svg';
 import '../styles/global.css';
 
 function CartButton() {
   const badge = 2;
+  const $isCartOpen = useStore(isCartOpen);
 
   return (
     <button
+      onClick={() => {
+        isCartOpen.set(!$isCartOpen)
+      }}
       className="flex items-center gap-2 rounded-xl bg-sky-100 px-3 py-2.5 transition hover:bg-sky-200 cursor-pointer"
     >
       <img src={cartIcon.src} className="size-5"></img>
