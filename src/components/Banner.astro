@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
-import '../styles/global.css';
 import banner from '../assets/banner.jpg';
+import '../styles/global.css';
 ---
 
 <section class="flex flex-col md:flex-row md:h-[90vh] px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto py-8 sm:py-12">
@@ -19,14 +19,14 @@ import banner from '../assets/banner.jpg';
       </div>
     </div> -->
 
-    <div class="flex w-full justify-center items-center mt-5 gap-3">
-      <a href="/jahairastore-products/#information" class="flex justify-center items-center text-sm rounded-2xl p-3 w-40 border-1 border-neutral-400 h-10">
-        <span class="font-semibold text-xs md:text-sm">Información</span>
-      </a>
-
+    <div class="flex flex-col sm:flex-row w-full justify-center items-center mt-5 gap-3">
       <a href="/jahairastore-products/#products" class="flex justify-center items-center text-sm bg-black rounded-2xl p-3 w-40 gap-2 h-10">
         <span class="text-white font-semibold text-xs md:text-sm">Productos</span>
         <Icon name="arrow-down" class="size-4" />
+      </a>
+      
+      <a href="/jahairastore-products/#information" class="flex justify-center items-center text-sm rounded-2xl p-3 w-40 border-1 border-neutral-400 h-10">
+        <span class="font-semibold text-xs md:text-sm">Información</span>
       </a>
     </div>
 

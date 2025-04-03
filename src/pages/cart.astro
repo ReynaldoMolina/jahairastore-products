@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import { ClientCart } from '../components/ClientCart.jsx';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+	<Header />
+  <ClientCart client:only />
+	<div class="flex grow"></div>
+	<Footer />
+</Layout>

@@ -1,9 +1,9 @@
 import { useStore } from '@nanostores/react';
-import { cartData, isCartOpen } from '../components/cartData';
+import { cartData, isCartOpen } from '../components/data';
 import cartIcon from '../icons/cart.svg';
 import '../styles/global.css';
 
-function CartButton() {
+function CartToggle() {
   const $isCartOpen = useStore(isCartOpen);
   const $cartData = useStore(cartData);
   const badge = $cartData.length;
@@ -17,9 +17,9 @@ function CartButton() {
     >
       <img src={cartIcon.src} className="size-5"></img>
       <span className="text-sm font-semibold">Carrito</span>
-      <span className={`${badge < 1 && "hidden"} flex items-center justify-center rounded-full size-6 text-xs bg-red-300 font-bold`}>{badge}</span>
+      <span className="flex items-center justify-center rounded-full size-5 text-xs bg-red-300 font-bold">{badge}</span>
     </button>
   );
 }
 
-export { CartButton };
+export { CartToggle };
