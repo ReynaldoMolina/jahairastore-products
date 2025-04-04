@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useStore } from '@nanostores/react';
 import { cartData, isCartOpen } from './data';
-import { products } from './data';
+import { useGetData } from "./useGetData";
 import cartEmpty from '../icons/cart-empty.svg';
 import deleteIcon from '../icons/delete.svg';
 import shareIcon from '../icons/share.svg';
@@ -11,7 +11,11 @@ function Cart() {
   const $isCartOpen = useStore(isCartOpen);
   const $cartData = useStore(cartData);
   const cartRef = useRef(null); // Create a ref
+  let productList = [];
+  let cartTotal = 0;
 
+  const { data: products, isLoading } = useGetData();
+  
   // Load cart data from localStorage on component mount
   useEffect(() => {
     try {
@@ -35,15 +39,19 @@ function Cart() {
     cartData.set(newCart);
   }
 
-  const productList = $cartData.map((product) => {
-    const productInfo = products.filter((e) => e.id === product.id)[0];
-    return {
-      ...product,
-      name: productInfo.name,
-      price: productInfo.price,
-      image: productInfo.image
-    }
-  });
+  if (!isLoading) {
+    productList = $cartData.map((product) => {
+      const productInfo = products.filter((e) => e.id === product.id)[0];
+      return {
+        ...product,
+        name: productInfo.name,
+        price: productInfo.price,
+        image: productInfo.image
+      }
+    });
+
+    cartTotal = productList.reduce((sum, product) => sum + (product.price * product.qty), 0);
+  }
 
   function deleteProduct(id) {
     const newCart = $cartData.filter((item) => item.id !== id);
@@ -75,8 +83,6 @@ function Cart() {
   
     return shareUrl;
   }
-
-  const cartTotal = productList.reduce((sum, product) => sum + (product.price * product.qty), 0);
 
   useEffect(() => {
     function handleClickOutside(event) {

@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Banner from '../components/Banner.astro';
-import Products from '../components/Products.astro';
+import { Products } from '../components/Products';
 import Information from '../components/Information.astro';
 import Footer from '../components/Footer.astro';
 ---
@@ -10,7 +10,7 @@ import Footer from '../components/Footer.astro';
 <Layout>
 	<Header />
 	<Banner />
-	<Products />
+	<Products client:load />
 	<Information />
 	<Footer />
 </Layout>
